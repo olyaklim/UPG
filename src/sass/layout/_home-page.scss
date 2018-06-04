@@ -124,11 +124,20 @@
 
 //.services-sect +
 .services-sect {
-  background-color: $light;
+  background-color: #706775;
+  background-image: url(../img/bg/bg_slide_rotate.jpg);
+  background-size: cover;
+  background-position: 50%;
+  background-attachment: fixed;
+  color: #ffffff;
+}
+
+.slider-list__wrap-horizontal {
+  display: flex;
 }
 
 .slider-list {
-  display: flex;
+  display: block;
   counter-reset: count-circle;
   font-size: 1rem;
  
@@ -138,7 +147,7 @@
   }
   
   &#item-2 .circle-nav__radius{
-    transform: rotate(-45deg);
+    transform: rotate(90deg);
     
     .arrow-stroke:first-child {
       stroke-dashoffset: 70;
@@ -159,7 +168,7 @@
   }
   
   &#item-4 .circle-nav__radius{
-    transform: rotate(90deg);
+    transform: rotate(-45deg);
     
     .circle-nav__arrow {
       transform: scale(1, -1) rotate(-90deg);
@@ -190,6 +199,7 @@
 
 .slider-list__item {
   display: flex;
+  align-items: center;
   width: calc(32% - 3.125em);
   
   @media screen and (max-width: $screen-tablet) {
@@ -201,11 +211,20 @@
   }
 }
 
+.slider-list__item--top {
+  width: 100%;
+}
+
+.slider-list__item--bottom {
+  width: 100%;
+}
+
 .slider-list__radius {
   align-self: center;
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 50px;
   width: calc( 36% + 6.5em );
+  overflow: hidden;
   
   @media screen and (max-width: $screen-tablet) {
     display: none;
@@ -280,10 +299,48 @@
   transition: stroke-dashoffset $anim *2;
 }
 
+.circle-nav__photo {
+  position: absolute;
+  width: 8em;
+  height: 8em;
+  margin: auto;
+
+  &.circle-nav__photo--top {
+    top: -30px;
+    left: 0;
+    right: 0;
+  }
+
+  &.circle-nav__photo--left {
+    top: 0;
+    left: -30px;
+    right: auto;
+    bottom: 0;
+  }
+
+  &.circle-nav__photo--right {
+    top: 0;
+    left: auto;
+    right: -30px;
+    bottom: 0;
+  }
+
+  &.circle-nav__photo--bottom {
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: -30px;
+  }
+
+}
+.circle-nav__photo > .full-pic {
+    border-radius: 50%;
+    border: 8px solid #eee;
+}
+
 .circle-nav__item-img {
   position: relative;
-  padding-bottom: 61%;
-  margin-bottom: .8em;
+  padding-bottom: 96%;
 }
 
 .circle-nav__pic {
@@ -293,7 +350,7 @@
   bottom: 0;
   right: 0;
   height: 82%;
-  width: 82%;
+  width: 50%;
   margin: auto;
   object-fit: contain;
 }
@@ -324,6 +381,16 @@
         padding: 0;
       }
     }
+  }
+
+  &.circ-list--top {
+    text-align: center;
+    align-items: center;
+  }
+
+  &.circ-list--bottom {
+    text-align: center;
+    align-items: center;
   }
   
   &.circ-list--right {
@@ -357,7 +424,7 @@
   
   &.active {
     .circ-item__title {
-      color: $brand-color;
+      color: #8cef0a;
     }
   }
   
@@ -389,7 +456,7 @@
     @media screen  and (min-width: $screen-tablet) {
       &:hover {
         .circ-item__title {
-          color: $brand-color;
+          color: #8cef0a;
         }
       }
     }
@@ -404,6 +471,9 @@
 
 .circ-item__count {
   flex-shrink: 0;
+  position: relative;
+  width: 3em;
+  height: 3em;
   color: $brand-color;
   transition: color $anim;
   
@@ -411,9 +481,17 @@
     counter-increment: count-circle;
     content: counter(count-circle, decimal-leading-zero);
     display: block;
+    height: 1em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
     font-weight: 700;
     font-size: 1.875em;
-    transform: rotate(-90deg);
+    line-height: 1em;
+    text-align: center;
     
     @media screen and (max-width: $screen-sm-max) {
       margin-bottom: 10px;
@@ -424,11 +502,14 @@
   &:before {
     content: '';
     display: block;
-    width: 1px;
-    height: 1.875em;
-    margin: 0 auto;
-    margin-bottom: 1em;
-    background-color: currentColor;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: #8cef0a;
+    border-radius: 50%;
     
     @media screen and (max-width: $screen-sm-max) {
       display: none;

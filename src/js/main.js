@@ -53,7 +53,7 @@ $(document).ready(function () {
       var firstTitleSect = $('[data-number="item-1"]').find('.circ-item__title').text()
       var firstMainImg =   $('.circ-item .circ-item__pic').attr('src');
 
-      $('.circle-nav__item-title').text(firstTitleSect);
+      // $('.circle-nav__item-title').text(firstTitleSect);
       $('.circle-nav__pic').attr('src', firstMainImg);
 
       $('.circ-item').click(function() {
@@ -75,8 +75,8 @@ $(document).ready(function () {
         //    add title
         var titleSect = $(this).find('.circ-item__title').text();
 
-        $('.circle-nav__item-title').text('');
-        $('.circle-nav__item-title').text(titleSect);
+        // $('.circle-nav__item-title').text('');
+        // $('.circle-nav__item-title').text(titleSect);
 
         //    add img 
         var mainImg = $(this).find('.circ-item__pic').attr('src');
