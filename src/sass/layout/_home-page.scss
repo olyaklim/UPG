@@ -38,16 +38,37 @@
 
 .advantages-item__ico {
   display: block;
-  width: 8.9em;
-  height: 8.9em;
-  padding: 1.2em;
+  // width: 8.9em;
+  // height: 8.9em;
+  // padding: 1.2em;
   margin: 0 auto;
   margin-bottom: 2em;
-  border-radius: 50%;
-  border: .5em solid;
-  background-color: $brand-color;
-  box-shadow: 0 0 0 1px $brand-color;
-  color: $white;
+  // border-radius: 50%;
+  // border: .5em solid;
+  // background-color: $brand-color;
+  // box-shadow: 0 0 0 1px $brand-color;
+  // color: $white;
+}
+
+.advantages-item__hexagon {
+    display: block;
+    fill: #c6ff00;
+    stroke: green;
+    stroke-dasharray: 816;
+    stroke-dashoffset: 816;
+    stroke-width: 2px;
+    transition: stroke-dashoffset 2s;
+    transition-delay: .3s;
+    /* stroke-dashoffset: 378; */
+     
+}
+
+.advantages-item__hexagon:hover {
+    stroke-dashoffset: 0;
+ 
+}
+.advantages-item__hexagon:hover polygon {
+   fill: #5be341;
 }
 
 //.advantages - 
