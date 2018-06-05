@@ -1,7 +1,7 @@
 
 .header-page {
-  margin-bottom: 1.8em;
   font-size: 1rem;
+  box-shadow: 0 16px 15px -12px rgba(0,0,0,.55);
 }
 
 .header-page__top-panel {
@@ -51,8 +51,6 @@
 }
 
 .header-page__logo {
-  /*align-self: flex-start;*/
-  /*flex: 1;*/
   padding: 1em 0;
 
   @media screen and (max-width: $screen-tablet) {
