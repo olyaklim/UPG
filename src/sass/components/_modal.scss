@@ -104,19 +104,8 @@
 
 .input-item--area {
   .input-item__input {
-    padding-top: .8em;
+    height: 6em;
+    padding: .8em;
+    border: 1px solid #d5d5d5;
   }
-}
-
-.form-message {
-  display: flex;
-  justify-content: space-between;
-}
-
-.form-message__right-col {
-  width: 50%;
-}
-
-.form-message__left-col {
-  width: 43%;
 }

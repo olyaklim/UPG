@@ -12,7 +12,7 @@ const uglify =                require('gulp-uglify');
 const imagemin  =             require('gulp-imagemin');
 const pngquant  =             require('imagemin-pngquant');
 const plumber =               require("gulp-plumber");
-const svgSprite =             require('gulp-svg-sprites');
+//const svgSprite =             require('gulp-svg-sprites');
 const svgmin =                require('gulp-svgmin');
 const cheerio =               require('gulp-cheerio');
 const replace =               require('gulp-replace');
@@ -25,14 +25,14 @@ const path = {
     js: 'dist/js',
     css: 'dist/css',
     img: 'dist/img',
-    svg: 'dist/img/svg-sprite',
+    //svg: 'dist/img/svg-sprite',
   },
   src: {
     html: 'src/html',
     js: 'src/js',
     sass: 'src/sass',
     img: 'src/img/**/*',
-    svg: 'src/img/svg-sprite/ico/*',
+    //svg: 'src/img/svg-sprite/ico/*',
   },
 };
 
@@ -97,40 +97,7 @@ gulp.task('img', function() {
   .pipe(gulp.dest(path.dist.img));
 });
 
-gulp.task('svgSpriteBuild', function () {
-  return gulp.src(path.src.svg)
-  // minify svg
-    .pipe(svgmin({
-      js2svg: {
-        pretty: true
-      }
-    }))
-    // remove all fill and style declarations in out shapes
-    .pipe(cheerio({
-      run: function ($) {
-        $('[fill^="#"]').removeAttr('fill');
-        $('[style]').removeAttr('style');
-        $('[class]').removeAttr('class');
-        $('style').remove();
-        $('title').remove();
-      },
-      parserOptions: { xmlMode: true }
-    }))
-    // cheerio plugin create unnecessary string '>', so replace it.
-    .pipe(replace('&gt;', '>'))
-    // build svg sprite
-    .pipe(svgSprite({
-        mode: "symbols",
-        preview: false,
-        svg: {
-          symbols: 'sprite.svg'
-        }
-      }
-    ))
-    .pipe(gulp.dest(path.dist.svg));
-});
-
-gulp.task('build', ['html', 'css-min-style', 'js', 'img', 'svgSpriteBuild']);
+gulp.task('build', ['html', 'css-min-style', 'js', 'img']);
 
 gulp.task('watch', ['build'], () => {
   browserSync({ server: './dist' });
@@ -139,5 +106,4 @@ gulp.task('watch', ['build'], () => {
   gulp.watch(`${path.src.sass}/**/*.scss`, ['css-min-style']);
   gulp.watch(`${path.src.js}/**/*.js`, ['js']);
   gulp.watch(`${path.src.img}`, ['img']);
-  gulp.watch(`${path.src.svg}`, ['svgSpriteBuild']);
 });
