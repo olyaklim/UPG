@@ -317,7 +317,7 @@
   transition: stroke-dashoffset $anim *2;
 }
 
-.circle-nav__photo {
+.circle-photo {
   position: absolute;
   width: 8em;
   height: 8em;
@@ -331,38 +331,38 @@
     margin-bottom: 1em;
   }
 
-  // &.circle-nav__photo--active-photo img {
+  // &.circle-photo--active-photo img {
   //   border-color: $theme_light;
   // }
 
-  &.circle-nav__photo--top {
+  &.circle-photo--top {
     top: -30px;
     left: 0;
     right: 0;
   }
 
-  &.circle-nav__photo--left {
+  &.circle-photo--left {
     top: 0;
     left: -30px;
     right: auto;
     bottom: 0;
   }
 
-  &.circle-nav__photo--right {
+  &.circle-photo--right {
     top: 0;
     left: auto;
     right: -30px;
     bottom: 0;
   }
 
-  &.circle-nav__photo--bottom {
+  &.circle-photo--bottom {
     top: auto;
     left: 0;
     right: 0;
     bottom: -30px;
   }
 
-  &.circle-nav__photo--mob {
+  &.circle-photo--mob {
     display: none;
 
     @media screen and (max-width: $screen-tablet) {
@@ -383,7 +383,7 @@
   }
 
 }
-.circle-nav__photo > .full-pic {
+.circle-photo > .full-pic {
     border-radius: 50%;
     border: 8px solid #eee;
 }

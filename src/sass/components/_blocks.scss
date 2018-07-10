@@ -70,6 +70,10 @@
 .form-message__btn:hover span {
   color: $theme_light;
 }
+
+.form-message-btn:hover span {
+  color: $theme_light;
+}
 //.btn -
 
 //.logo +
@@ -598,6 +602,21 @@
 .prev-new__pic {
   transition: 0.2s linear all;
 }
+
+.prev-new__ico {
+  width: 1em;
+  height: 1em;
+  margin-right: 1.3em;
+  margin-bottom: auto;
+
+  @media screen and (max-width: $screen-tablet) {
+    margin-right: 0;
+    margin-bottom: 1em;
+    display: block;
+    width: 100%;
+  }
+}
+
 
 .prev-new__title {
   margin-bottom: 1em;

@@ -400,6 +400,9 @@ body {
 .form-message__btn:hover span {
   color: #50bf29; }
 
+.form-message-btn:hover span {
+  color: #50bf29; }
+
 .logo {
   position: relative;
   display: block;
@@ -950,6 +953,18 @@ body {
   -webkit-transition: 0.2s linear all;
   -o-transition: 0.2s linear all;
   transition: 0.2s linear all; }
+
+.prev-new__ico {
+  width: 1em;
+  height: 1em;
+  margin-right: 1.3em;
+  margin-bottom: auto; }
+  @media screen and (max-width: 1024px) {
+    .prev-new__ico {
+      margin-right: 0;
+      margin-bottom: 1em;
+      display: block;
+      width: 100%; } }
 
 .prev-new__title {
   margin-bottom: 1em;
@@ -1746,7 +1761,7 @@ body {
   -o-transition: stroke-dashoffset 0.6s;
   transition: stroke-dashoffset 0.6s; }
 
-.circle-nav__photo {
+.circle-photo {
   position: absolute;
   width: 8em;
   height: 8em;
@@ -1757,32 +1772,32 @@ body {
   -o-transition: 0.3s all ease;
   transition: 0.3s all ease; }
   @media screen and (max-width: 1024px) {
-    .circle-nav__photo {
+    .circle-photo {
       position: static;
       margin-bottom: 1em; } }
-  .circle-nav__photo.circle-nav__photo--top {
+  .circle-photo.circle-photo--top {
     top: -30px;
     left: 0;
     right: 0; }
-  .circle-nav__photo.circle-nav__photo--left {
+  .circle-photo.circle-photo--left {
     top: 0;
     left: -30px;
     right: auto;
     bottom: 0; }
-  .circle-nav__photo.circle-nav__photo--right {
+  .circle-photo.circle-photo--right {
     top: 0;
     left: auto;
     right: -30px;
     bottom: 0; }
-  .circle-nav__photo.circle-nav__photo--bottom {
+  .circle-photo.circle-photo--bottom {
     top: auto;
     left: 0;
     right: 0;
     bottom: -30px; }
-  .circle-nav__photo.circle-nav__photo--mob {
+  .circle-photo.circle-photo--mob {
     display: none; }
     @media screen and (max-width: 1024px) {
-      .circle-nav__photo.circle-nav__photo--mob {
+      .circle-photo.circle-photo--mob {
         display: block;
         top: auto;
         left: auto;
@@ -1790,12 +1805,12 @@ body {
         bottom: auto;
         margin-top: 0.85em;
         margin-bottom: 2.6em; } }
-  .circle-nav__photo:hover {
+  .circle-photo:hover {
     -webkit-transform: scale(1.05);
         -ms-transform: scale(1.05);
             transform: scale(1.05); }
 
-.circle-nav__photo > .full-pic {
+.circle-photo > .full-pic {
   -webkit-border-radius: 50%;
           border-radius: 50%;
   border: 8px solid #eee; }

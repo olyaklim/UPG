@@ -34,30 +34,30 @@ $(document).ready(function () {
         
       });
 
-      $('.circle-nav__photo--top').click(function() {
+      $('.circle-photo--top').click(function() {
         circ_item_click($('.circ-item--top'));
         
-        $('.circle-nav__photo').removeClass('circle-nav__photo--active-photo');
+        $('.circle-photo').removeClass('circle-photo--active-photo');
 
-        $(this).toggleClass('circle-nav__photo--active-photo');
+        $(this).toggleClass('circle-photo--active-photo');
       });
 
-      $('.circle-nav__photo--left').click(function() {
+      $('.circle-photo--left').click(function() {
         circ_item_click($('.circ-item--left'));
-        $('.circle-nav__photo').removeClass('circle-nav__photo--active-photo');
-        $(this).toggleClass('circle-nav__photo--active-photo');
+        $('.circle-photo').removeClass('circle-photo--active-photo');
+        $(this).toggleClass('circle-photo--active-photo');
       });
 
-      $('.circle-nav__photo--right').click(function() {
+      $('.circle-photo--right').click(function() {
         circ_item_click($('.circ-item--right'));
-        $('.circle-nav__photo').removeClass('circle-nav__photo--active-photo');
-        $(this).toggleClass('circle-nav__photo--active-photo');
+        $('.circle-photo').removeClass('circle-photo--active-photo');
+        $(this).toggleClass('circle-photo--active-photo');
       });
 
-      $('.circle-nav__photo--bottom').click(function() {
+      $('.circle-photo--bottom').click(function() {
         circ_item_click($('.circ-item--bottom'));
-        $('.circle-nav__photo').removeClass('circle-nav__photo--active-photo');
-        $(this).toggleClass('circle-nav__photo--active-photo');
+        $('.circle-photo').removeClass('circle-photo--active-photo');
+        $(this).toggleClass('circle-photo--active-photo');
       });
 
       function circ_item_click(circ_btn) {
